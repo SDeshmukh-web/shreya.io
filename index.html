@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Resizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ab/18/13/ab181300-de89-c908-d7df-3e18921fcb57/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/434x0w.webp" alt="Logo" class="logo">
+    <h1>Image Resizer</h1>
+
+    <input type="file" id="imageInput" accept="image/*"><br>
+
+    <div class="resize-controls">
+      <label>Width: <input type="number" id="width"></label>
+      <label>Height: <input type="number" id="height"></label>
+      <label>
+        <input type="checkbox" id="aspectRatio"> Maintain Aspect Ratio
+      </label>
+    </div>
+
+    <div class="extra-controls">
+      <label>Format:
+        <select id="format">
+          <option value="image/png">PNG</option>
+          <option value="image/jpeg">JPG</option>
+          <option value="image/webp">WEBP</option>
+        </select>
+      </label>
+
+      <label>Quality:
+        <input type="range" id="quality" min="1" max="100" value="100">
+        <span id="qualityValue">100%</span>
+      </label>
+
+      <label>
+        <input type="checkbox" id="grayscale"> Grayscale
+      </label>
+
+      <div class="transform-buttons">
+        <button onclick="flipImage('horizontal')">Flip Horizontal</button>
+        <button onclick="flipImage('vertical')">Flip Vertical</button>
+        <button onclick="rotateImage()">Rotate</button>
+      </div>
+    </div>
+
+    <button onclick="resizeImage()">Resize Image</button>
+    <button onclick="resetAll()">Reset</button>
+
+    <img id="outputImage" src="" alt="Resized Image">
+    <a id="downloadLink" download="resized-image.png">Download Resized Image</a>
+
+    <canvas id="canvas" style="display: none;"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

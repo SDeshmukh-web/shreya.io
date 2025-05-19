@@ -1,0 +1,158 @@
+@import url('https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ab/18/13/ab181300-de89-c908-d7df-3e18921fcb57/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/434x0w.webp');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #2b5876, #4e4376);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: #fff;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+input[type="file"],
+input[type="number"],
+select,
+input[type="range"] {
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: all 0.3s;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #6dd5ed;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  appearance: none;
+  background: #fff;
+  height: 4px;
+  border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #00ffe7;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px 30px;
+  font-weight: 500;
+  color: #eee;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+button {
+  margin: 10px 5px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #00c6ff, #0072ff);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3);
+}
+
+.transform-buttons button {
+  background: linear-gradient(145deg, #f7971e, #ffd200);
+  color: #000;
+}
+
+#outputImage {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 3px dashed #fff;
+  display: none;
+}
+
+#downloadLink {
+  display: none;
+  margin-top: 15px;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: #00ffe7;
+  color: #000;
+  font-weight: 600;
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input[type="file"],
+  input[type="number"],
+  select {
+    font-size: 0.9rem;
+  }
+}
